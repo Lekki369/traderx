@@ -103,11 +103,11 @@ class HomePage extends StatelessWidget {
                 SizedBox(height: 24.h),
                 accounts(
                     color: Global.lightgreen,
-                    accountName: 'Ckeckings',
+                    accountName: 'Checkings',
                     money: '\$25,000.00'),
                 SizedBox(height: 24.h),
                 accounts(
-                    color: Global.lightgreen,
+                    color: Global.orange2,
                     accountName: 'Business',
                     money: '\$5,000.00'),
                 SizedBox(height: 24.h),

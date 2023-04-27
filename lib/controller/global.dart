@@ -16,6 +16,7 @@ class Global {
   static Color lightgrey = const Color.fromRGBO(247, 247, 247, 1);
   static Color lightgrey2 = const Color.fromRGBO(251, 251, 251, 1);
   static Color orange = const Color.fromRGBO(236, 126, 61, 1);
+  static Color orange2 = const Color.fromRGBO(251, 229, 216, 1);
   static Color lightgrey3 = const Color.fromRGBO(193, 189, 189, 1);
 
   static TextStyle textStyle({
