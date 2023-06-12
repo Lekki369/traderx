@@ -142,6 +142,7 @@ Widget emailPhoneLogIn({required var controller}) {
                       : Get.to(() => const SignUpEmail());
                 },
                 child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
@@ -149,7 +150,7 @@ Widget emailPhoneLogIn({required var controller}) {
                       size: 30.sp,
                       color: Global.green,
                     ),
-                    SizedBox(width: 10.w),
+                    // SizedBox(width: 10.w),
                     Text(
                       controller.toPhoneLogin.value ? 'Email' : 'Phone Number',
                       style: Global.textStyle(
