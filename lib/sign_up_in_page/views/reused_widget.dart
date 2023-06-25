@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/route_manager.dart';
+import 'package:traderx/sign_up_in_page/views/sign_up_email.dart';
+import 'package:traderx/sign_up_in_page/views/sign_up_phone.dart';
 import '../../controller/global.dart';
-import 'sign_up_email.dart';
-import 'sign_up_phone.dart';
 
 Widget textField({
   required bool iscancelButtonPresent,
@@ -130,37 +130,34 @@ Widget emailPhoneLogIn({required var controller}) {
       ),
       SizedBox(height: 27.h),
       Center(
-        child: Global.defaultContainer(
-            width: 170.w,
-            height: 47.h,
-            color: Colors.transparent,
-            child: Obx(() => TextButton(
-                onPressed: () async {
-                  controller.toPhoneLog();
-                  await controller.toPhoneLogin.value
-                      ? Get.to(() => const SignUpPhone())
-                      : Get.to(() => const SignUpEmail());
-                },
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      controller.toPhoneLogin.value ? Icons.email : Icons.phone,
-                      size: 30.sp,
-                      color: Global.green,
-                    ),
-                    // SizedBox(width: 10.w),
-                    Text(
-                      controller.toPhoneLogin.value ? 'Email' : 'Phone Number',
-                      style: Global.textStyle(
-                          fontWeight: FontWeight.w700,
-                          size: 14.sp,
-                          color: Global.green),
-                    ),
-                  ],
-                ))),
-            hasBorder: true),
+        child: Obx(
+          () => TextButton(
+            onPressed: () async {
+              controller.toPhoneLog();
+              await controller.toPhoneLogin.value
+                  ? Get.to(() => const SignUpPhone())
+                  : Get.to(() => const SignUpEmail());
+            },
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  controller.toPhoneLogin.value ? Icons.email : Icons.phone,
+                  size: 30.sp,
+                  color: Global.green,
+                ),
+                SizedBox(width: 10.w),
+                Text(
+                  controller.toPhoneLogin.value ? 'Email' : 'Phone Number',
+                  style: Global.textStyle(
+                      fontWeight: FontWeight.w700,
+                      size: 14.sp,
+                      color: Global.green),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     ],
   );

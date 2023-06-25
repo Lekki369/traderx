@@ -1,5 +1,4 @@
 // ignore_for_file: unused_local_variable
-import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:traderx/model/user.dart';
@@ -59,7 +58,7 @@ class SignUpInController extends GetxController {
       "otp": otp,
       "channel": channel,
     });
-    final response = await http.post(Uri.parse(apiUrl), body: loginInfo);
+    // final response = await http.post(Uri.parse(apiUrl), body: loginInfo);
     Future.delayed(const Duration(seconds: 2), () {
       Get.to(() => const HomePage());
     });
