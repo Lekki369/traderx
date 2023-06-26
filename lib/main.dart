@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:traderx/controller/global.dart';
-import 'package:traderx/sign_up_in_page/views/sign_up_email.dart';
+import 'package:traderx/pages/login_with_mail/screens/mail_screen.dart';
+import 'package:traderx/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,15 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+      useInheritedMediaQuery: true,
       designSize: const Size(428, 926),
-      builder: (context, child) => GetMaterialApp(
+      builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          useMaterial3: true,
-          primaryColor: Global.green,
-        ),
+        theme: mainTheme,
         title: 'Traderx',
-        home: SignUpEmail(),
+        home: LoginMail(),
       ),
     );
   }
