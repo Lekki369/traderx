@@ -1,3 +1,3 @@
-import 'package:traderx/theme/themes.dart';
-
-final mainTheme = TradexTheme.theme;
+export './button_theme.dart';
+export './text_theme.dart';
+export './colors.dart';

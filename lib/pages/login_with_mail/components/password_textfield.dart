@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:traderx/theme/colors.dart';
-
-import '../../../theme/themes.dart';
+import '../../../theme/theme.dart';
 
 class PasswordTextField extends StatefulWidget {
   final TextEditingController controller;
-
   const PasswordTextField({
     super.key,
     required this.controller,
   });
-
   @override
   State<PasswordTextField> createState() => _PasswordTextFieldState();
 }
@@ -50,8 +46,8 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
               suffixIcon: IconButton(
                 onPressed: visible,
                 icon: isVisible
-                    ? const Icon(Icons.visibility_off)
-                    : const Icon(Icons.visibility),
+                    ? const Icon(Icons.visibility)
+                    : const Icon(Icons.visibility_off),
               ),
               border: InputBorder.none,
               hintText: 'Password',

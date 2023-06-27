@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:traderx/theme/themes.dart';
-
+import '../../../theme/theme.dart';
 import '../components/conponents.dart';
 
 class LoginMail extends StatelessWidget {
   const LoginMail({super.key});
-
   @override
   Widget build(BuildContext context) {
     TextEditingController emailController = TextEditingController();
@@ -37,21 +35,21 @@ class LoginMail extends StatelessWidget {
                 const SignInButton(),
                 const NoAccount(),
                 SizedBox(height: 30.h),
-                const Center(
+                Center(
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       SizedBox(
                         width: 5,
                         child: Divider(
-                          color: Colors.black,
+                          color: ThemeColor.black,
                         ),
                       ),
-                      Text('or log in with'),
+                      const Text('or log in with'),
                       SizedBox(
                         width: 5,
                         child: Divider(
-                          color: Colors.black,
+                          color: ThemeColor.black,
                         ),
                       ),
                     ],

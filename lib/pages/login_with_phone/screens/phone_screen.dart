@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:traderx/theme/themes.dart';
+import '../../../theme/theme.dart';
 import '../components/conponents.dart';
 
 class PhoneMail extends StatelessWidget {

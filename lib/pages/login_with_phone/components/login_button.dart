@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:traderx/theme/colors.dart';
+
+import '../../../theme/theme.dart';
 
 class SignInButton extends StatelessWidget {
   const SignInButton({super.key});

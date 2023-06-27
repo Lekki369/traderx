@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:traderx/theme/colors.dart';
-import 'package:traderx/theme/themes.dart';
+import '../../../theme/theme.dart';
 
 class EmailTextField extends StatelessWidget {
   final TextEditingController controller;
   const EmailTextField({super.key, required this.controller});
-
   @override
   Widget build(BuildContext context) {
     return Column(

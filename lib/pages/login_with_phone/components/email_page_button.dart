@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:traderx/pages/login_with_mail/screens/mail_screen.dart';
-import 'package:traderx/theme/colors.dart';
+
+import '../../../theme/theme.dart';
 
 class EmailPageButton extends StatelessWidget {
   const EmailPageButton({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Center(

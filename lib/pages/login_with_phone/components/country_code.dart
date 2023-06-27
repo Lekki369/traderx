@@ -1,9 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:traderx/theme/colors.dart';
-import 'package:traderx/theme/themes.dart';
-
+import '../../../theme/theme.dart';
 import 'conponents.dart';
 
 class CodePicker extends StatelessWidget {

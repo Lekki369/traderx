@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:traderx/theme/colors.dart';
+import '../../../theme/theme.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({super.key});
-  // final style = mainTheme.textButtonTheme.style?.textStyle;
   @override
   Widget build(BuildContext context) {
     return TextButton(

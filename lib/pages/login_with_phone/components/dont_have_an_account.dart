@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:traderx/theme/colors.dart';
+import '../../../theme/theme.dart';
 
 class NoAccount extends StatelessWidget {
   const NoAccount({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -17,7 +16,7 @@ class NoAccount extends StatelessWidget {
               'Sign Up',
               style: TextStyle(color: ThemeColor.green),
             ),
-          )
+          ),
         ],
       ),
     );
