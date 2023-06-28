@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:traderx/theme/colors.dart';
 
 class InfoCard extends StatelessWidget {
   final Color foregroundColor;
@@ -41,10 +40,8 @@ class InfoCard extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.only(
                   left: 16.sp, right: 8.sp, top: 10.sp, bottom: 11.sp),
-              height: 122.h,
-              width: 380.w,
               decoration: BoxDecoration(
-                color: ThemeColor.white,
+                color: foregroundColor,
                 borderRadius: BorderRadius.circular(10.r),
               ),
               child: Row(
@@ -53,7 +50,7 @@ class InfoCard extends StatelessWidget {
                   Image.asset(image),
                   Expanded(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
