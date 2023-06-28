@@ -30,34 +30,37 @@ class UserCard extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Container(
-          alignment: Alignment.center,
-          height: 34.h,
-          width: 34.w,
-          decoration: BoxDecoration(
-            color: ThemeColor.lightGrey,
-            shape: BoxShape.circle,
-          ),
-          child: Stack(
-            children: [
-              Icon(
-                Icons.notifications,
-                size: 20.sp,
-                color: ThemeColor.grey,
-              ),
-              Positioned(
-                bottom: 14.h,
-                left: 12.w,
-                child: Container(
-                  height: 5.h,
-                  width: 5.h,
-                  decoration: BoxDecoration(
-                    color: ThemeColor.red,
-                    shape: BoxShape.circle,
+        GestureDetector(
+          onTap: () {},
+          child: Container(
+            alignment: Alignment.center,
+            height: 34.h,
+            width: 34.w,
+            decoration: BoxDecoration(
+              color: ThemeColor.lightGrey,
+              shape: BoxShape.circle,
+            ),
+            child: Stack(
+              children: [
+                Icon(
+                  Icons.notifications,
+                  size: 20.sp,
+                  color: ThemeColor.grey,
+                ),
+                Positioned(
+                  bottom: 14.h,
+                  left: 12.w,
+                  child: Container(
+                    height: 5.h,
+                    width: 5.h,
+                    decoration: BoxDecoration(
+                      color: ThemeColor.red,
+                      shape: BoxShape.circle,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         )
       ],
