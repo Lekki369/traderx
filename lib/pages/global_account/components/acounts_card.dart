@@ -17,13 +17,14 @@ class AccountCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 210.h,
       decoration: BoxDecoration(
         color: ThemeColor.white,
         borderRadius: BorderRadius.circular(10.r),
         border: Border.all(color: ThemeColor.lightGrey, width: 0.5.w),
         boxShadow: [
           BoxShadow(
-            offset: Offset(5.w, 10.h),
+            offset: Offset(5.w, 5.h),
             color: ThemeColor.lightBlack,
             spreadRadius: 5.r,
           ),
@@ -68,43 +69,56 @@ class AccountCard extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 16.h),
-          InkWell(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.sp),
-              child: Row(
-                children: [
-                  Image.asset(Images.bankCard1),
-                  SizedBox(width: 12.w),
-                  Text(
-                    'View Virtual Card',
-                    style:
-                        TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600),
+          // SizedBox(),
+          SizedBox(
+            height: 50.h,
+            child: Material(
+              child: InkWell(
+                borderRadius: BorderRadius.circular(10.r),
+                overlayColor: MaterialStatePropertyAll(ThemeColor.lightGrey),
+                onTap: () {},
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.sp),
+                  child: Row(
+                    children: [
+                      Image.asset(Images.bankCard1),
+                      SizedBox(width: 12.w),
+                      Text(
+                        'View Virtual Card',
+                        style: TextStyle(
+                            fontSize: 14.sp, fontWeight: FontWeight.w600),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
           ),
-          SizedBox(height: 13.h),
           const Divider(),
-          SizedBox(height: 12.h),
-          InkWell(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.sp),
-              child: Row(
-                children: [
-                  Image.asset(Images.bankCard2),
-                  SizedBox(width: 12.w),
-                  Text(
-                    'Set up direct deposit',
-                    style:
-                        TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600),
+
+          SizedBox(
+            height: 50.h,
+            child: Material(
+              child: InkWell(
+                borderRadius: BorderRadius.circular(10.r),
+                onTap: () {},
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.sp),
+                  child: Row(
+                    children: [
+                      Image.asset(Images.bankCard2),
+                      SizedBox(width: 12.w),
+                      Text(
+                        'Set up direct deposit',
+                        style: TextStyle(
+                            fontSize: 14.sp, fontWeight: FontWeight.w600),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
           ),
-          SizedBox(height: 17.h),
         ],
       ),
     );
