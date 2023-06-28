@@ -15,7 +15,7 @@ class GlobalAccount extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 20.h),
             child: Column(
               children: [
                 const UserCard(),
@@ -35,9 +35,8 @@ class GlobalAccount extends StatelessWidget {
                   backgroundColor: ThemeColor.lightBlue2,
                   image: Images.group1,
                   headlineText: 'Get \$5 plus 10% of the fee for 365 days',
-                  bodyText: ' Refer a friend and get \$5 when they make'
-                      'and above, plus 10% of the fee everytime '
-                      'they make exchange for 365 days.',
+                  bodyText:
+                      'Refer a friend and get \$5 when they make their first dollars to naira exchange of \$500 and above, plus 10% of the fee everytime they make exchange for 365 days.',
                 ),
                 SizedBox(height: 25.h),
                 InfoCard(
