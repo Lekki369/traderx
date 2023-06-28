@@ -19,13 +19,13 @@ class InfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints.expand(width: double.infinity, height: 122.h),
+      constraints: BoxConstraints.expand(width: double.infinity, height: 130.h),
       child: Stack(
         children: [
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 27.h,
+              height: 37.h,
               width: 352.w,
               decoration: BoxDecoration(
                 color: backgroundColor,
@@ -41,7 +41,7 @@ class InfoCard extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.only(
                   left: 16.sp, right: 8.sp, top: 10.sp, bottom: 11.sp),
-              height: 112.h,
+              height: 122.h,
               width: 380.w,
               decoration: BoxDecoration(
                 color: ThemeColor.white,
@@ -60,6 +60,7 @@ class InfoCard extends StatelessWidget {
                           headlineText,
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w700),
+                          overflow: TextOverflow.ellipsis,
                         ),
                         Text(
                           bodyText,
